@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.shishi.model.Televizor;
-import com.shishi.model.Vino;
+
 
 
 public class FiltrirajTvController extends HttpServlet {
@@ -34,7 +34,7 @@ public class FiltrirajTvController extends HttpServlet {
 
 		if (markaInt == 3) {
 			HttpSession session = request.getSession();
-			session.setAttribute("tviZaStranicu", tviZaStranicu);
+			session.setAttribute("tvZaStranicu", tviZaStranicu);
 		} else {
 			String izabraniModel = Televizor.MOGUCI_MODELI[markaInt]; 
 			List<Televizor> filrirano = new ArrayList<>();
@@ -47,10 +47,10 @@ public class FiltrirajTvController extends HttpServlet {
 			
 			HttpSession session = request.getSession();
 			session.setAttribute("izabraniModel", izabraniModel);
-			session.setAttribute("tviZaStranicu", filrirano);
+			session.setAttribute("tvZaStranicu", filrirano);
 		}
 		
-		response.sendRedirect("PregledTV.jsp");
+		response.sendRedirect("PregledTv.jsp");
 
 	}
 }

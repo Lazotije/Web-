@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>Probni</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
+    <welcome-file>PregledTv.jsp</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
@@ -11,22 +11,42 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>DodajVinoController</display-name>
-    <servlet-name>DodajVinoController</servlet-name>
-    <servlet-class>com.shishi.controller.DodajVinoController</servlet-class>
+    <display-name>DodajTvController</display-name>
+    <servlet-name>DodajTvController</servlet-name>
+    <servlet-class>com.shishi.controller.DodajTvController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>DodajVinoController</servlet-name>
-    <url-pattern>/dodaj-vino</url-pattern>
+    <servlet-name>DodajTvController</servlet-name>
+    <url-pattern>/dodaj-tv</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>FiltrirajVinaController</display-name>
-    <servlet-name>FiltrirajVinaController</servlet-name>
-    <servlet-class>com.shishi.controller.FiltrirajVinaController</servlet-class>
+    <display-name>FiltrirajTvController</display-name>
+    <servlet-name>FiltrirajTvController</servlet-name>
+    <servlet-class>com.shishi.controller.FiltrirajTvController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>FiltrirajVinaController</servlet-name>
-    <url-pattern>/filtriraj-vino</url-pattern>
+    <servlet-name>FiltrirajTvController</servlet-name>
+    <url-pattern>/filtriraj-tv</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>IzmeniTvController</display-name>
+    <servlet-name>IzmeniTvController</servlet-name>
+    <servlet-class>com.shishi.controller.IzmeniTvController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IzmeniTvController</servlet-name>
+    <url-pattern>/daIzmenim</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ObrisiTvController</display-name>
+    <servlet-name>ObrisiTvController</servlet-name>
+    <servlet-class>com.shishi.controller.ObrisiTvController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ObrisiTvController</servlet-name>
+    <url-pattern>/daBrisem</url-pattern>
   </servlet-mapping>
 </web-app>
