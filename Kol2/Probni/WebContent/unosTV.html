@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+body{
+	background-color: black;
+}
+
+h1{
+  color:red;
+}
+
+td,h3,th{
+	color:white;
+}
+
+</style>
+
+<script>
+
+function validateForm() {
+   
+    var ser_br = document.forms["tvForma"]["serijskiBroj"].value;
+    if (ser_br == "" || ser_br == null) {
+        alert("SERIJSKI BROJ MORA BITI UNET...");
+        return false;
+    }
+    
+}
+
+
+</script>
+
+</head>
+<body>
+
+	<h1> Prodaja televizora </h1>
+
+	<form name="tvForma" onsubmit="return validateForm()"   method="POST" action="dodaj-tv">
+			     <table border='1'>
+			        <tr>
+			          <td>Serijski broj:</td>
+			          <td><input type='text' name='serijskiBroj'></td>
+			        </tr>
+			        <tr>
+			          <td>Cena</td>
+			          <td><input type='number' name='cena'></td>
+			        </tr>
+			        <tr>
+			          <td>Marka</td>
+			          <td><select name='marka' >
+			            <option value='0'>SAMSUNG</option>
+			            <option value='2'>LG</option>
+			            <option value='1'>PANASONIC</option>
+			            </select>
+			          </td> 
+			        </tr> 
+			        <tr> 
+			          <td colspan='2'><input type='submit' name='operacija' value='dodaj'> 
+			                          <input type='submit' name='operacija' value='snimi'> 
+			                          <a href='/index.html'>odustani</a></td>
+			        </tr>
+			      </table>
+			    </form>
+	<a href="PregledTv.jsp">Spisak televizora</a>
+
+</body>
+</html>
